@@ -1,0 +1,11 @@
+[package]
+name = "lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy-sol-types = { workspace = true }
+serde = { version = "1.0.210", default-features = false, features = ["derive", "alloc"]}
+fixed = "1.28.0"
+sprs = "0.11.2"
+rand = "0.8.5"
