@@ -1,0 +1,39 @@
+#![allow(warnings)]
+[package]
+version = "0.1.0"
+name = "script"
+edition = "2021"
+default-run = "main"
+
+[[bin]]
+name = "main"
+path = "src/bin/main.rs"
+
+[[bin]]
+name = "evm"
+path = "src/bin/evm.rs"
+
+[[bin]]
+name = "vkey"
+path = "src/bin/vkey.rs"
+
+[dependencies]
+sp1-sdk = { path = "./../../../sp1/crates/sdk" }
+serde_json = { version = "1.0.128", default-features = false, features = ["alloc"] }
+serde = { version = "1.0.210", default-features = false, features = ["derive", "alloc"]}
+clap = { version = "4.5.17", features = ["derive", "env"] }
+tracing = "0.1.40"
+hex = "0.4.3"
+rand = "0.8"
+alloy-sol-types = { workspace = true }
+lib = { path = "../lib" }
+sp1-derive = { path = "./../../../sp1/crates/derive" }
+serde_cbor = "0.11.2"
+sp1-build = { path = "./../../../sp1/crates/build" }
+blake3 = { version = "1.3.1", features = ["serde"] }
+
+
+[build-dependencies]
+sp1-helper = { path = "./../../../sp1/crates/helper" }
+sp1-build = { path = "./../../../sp1/crates/build" }
+

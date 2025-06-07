@@ -1,0 +1,23 @@
+[package]
+version = "0.1.0"
+name = "init"
+edition = "2021"
+
+[dependencies]
+alloy-sol-types = { workspace = true }
+sp1-zkvm = { path = "./../../../sp1/crates/zkvm/entrypoint" }
+lib = { path = "../lib" }
+sp1-derive = { path = "./../../../sp1/crates/derive" }
+sp1-sdk = { path = "./../../../sp1/crates/sdk" }
+serde_cbor = "0.5.2"
+serde_json = { version = "1.0.128", default-features = false, features = ["alloc"] }
+serde = { version = "1.0.210", default-features = false, features = ["derive", "alloc"]}
+clap = { version = "4.5.17", features = ["derive", "env"] }
+tracing = "0.1.40"
+hex = "0.4.3"
+sp1-build = { path = "./../../../sp1/crates/build" }
+
+[build-dependencies]
+sp1-helper = { path = "./../../../sp1/crates/helper" }
+sp1-build = { path = "./../../../sp1/crates/build" }
+
