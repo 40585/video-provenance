@@ -1,0 +1,22 @@
+change-id = 129295
+
+[llvm]
+download-ci-llvm = true
+
+[workspace]
+members = [
+  "video-resizing/script",
+  "aggregation/script", "video-signature-verification",
+  "inner-product-proof/program",
+  "inner-product-proof/script",
+  "inner-product-precompile/program",
+  "inner-product-precompile/script"
+]
+resolver = "2"
+
+[workspace.package]
+version = "1.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+alloy-sol-types = "0.8.22"

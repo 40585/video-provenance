@@ -1,0 +1,17 @@
+[package]
+name = "inner-product-script"
+version = { workspace = true }
+edition = { workspace = true }
+default-run = "inner-product-script"
+publish = false
+
+[build-dependencies]
+sp1-build = { path = "./../../../sp1/crates/build" }
+
+[[bin]]
+name = "inner-product-script"
+path = "src/main.rs"
+
+[dependencies]
+sp1-sdk = { path = "./../../../sp1/crates/sdk" }
+rand = "0.9.0"
